@@ -1,0 +1,196 @@
+:root{
+	--themecolor: #1dd1a1;
+	--themecolor2: #24292e;
+}
+
+.container{
+	width: 1200px;
+}
+
+.flex-inline{
+	display: inline-flex;
+}
+
+.banner{
+	background-color: lightgrey;
+	padding: 2rem 0rem;
+}
+
+.banner .row{
+	align-items: center;
+}
+
+.banner .desc{
+	margin-bottom: 0;
+}
+
+.banner .column2{
+	text-align: center;
+}
+
+.banner .name{
+	line-height: 1.3;
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.banner .social{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+a.icon{
+	margin: 0px 10px;
+	text-decoration: unset;
+}
+
+.social img{
+	width: 30px;
+	height: 30px;
+}
+
+.social .mail{
+	color: black;
+}
+
+.main-content .card{
+	height: 100%;
+}
+
+.mnc{
+	margin-top: 2rem;
+}
+
+.mnc1 .card-title, .skills .card-title{
+	font-size: 20px;
+	font-weight: 500;
+	color : var(--themecolor);
+}
+
+.pr-list{
+	padding-left: 1rem;
+}
+
+.pr-list strong{
+	font-weight: 600;
+}
+
+.pr-list li{
+	list-style-type: none;
+}
+
+.pr-list .project-name{
+	text-decoration: underline;
+	color: var(--themecolor);
+	position: relative;
+}
+
+.pr-list a.project-name::after{
+	content: " \21F1";
+    color: var(--themecolor);
+    position: absolute;
+    opacity: 0;
+    transform: rotate(90deg);
+    top: 3px;
+    right: -13px;
+    font-size: 12px;
+}
+
+.pr-list .project-name:hover:after{
+	opacity: 1;
+}
+
+.skill{
+	margin-bottom: 10px;
+	position: relative;
+	background: lightgrey;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.level-bar, .skill-name{
+	position: absolute;
+}
+.level-bar{
+	background: #f7e018;
+	width: 70%;
+	height: 2rem;
+	top: 0;
+	left: 0;
+}
+.skill-name{
+	left: 5%;
+	font-weight: 500;
+}
+.knowledge .card{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 0rem;
+}
+.knowledge{
+	margin: 2rem 0rem;
+}
+.knowledge img{
+	width: 5rem;
+	margin: 1rem 1rem;
+	height: inherit;
+}
+.uptd{
+	text-align: right;
+	margin: 2rem 0rem;
+}
+
+.uptd code{
+	color: var(--themecolor2)
+}
+@media(min-width: 576px){
+	.nav-to-skill{
+		color: unset;
+	}
+}
+
+@media(min-width: 992px){
+	.knowledge .card{
+		justify-content: space-evenly;
+	}
+}
+
+@media(max-width: 1999px){
+	.container{
+		width: 95%;
+	}
+}
+
+@media(max-width: 767px){
+	.knowledge img{
+		width: 4rem;
+	}
+}
+
+@media(max-width: 575px){
+	.banner .row{
+		flex-direction: column-reverse;
+	}
+	.banner .column2{
+		text-align: left;
+		padding-bottom: 2rem;
+	}
+	.banner .social{
+		justify-content: unset;
+	}
+	.skill.gt-10{
+		display: none;
+	}
+	.pr-list{
+		padding-left: 0;
+	}
+	.knowledge img{
+		width: 3rem;
+	}
+}
